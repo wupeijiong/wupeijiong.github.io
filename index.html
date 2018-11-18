@@ -1,20 +1,96 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<body>
+<meta charset="utf-8"/>
+<style>
+	/*头部 ， header*/
+	#header_item {border-style: solid;padding: 10px;margin : 5px;}
+	/*下部 below*/
+    #below {border-style: solid;height: 500px;margin : 5px;}
+	/*左边 left*/
+	#left_navi {border-style: solid;float:left;padding:5px; width: 20%;height: 95%;margin : 5px;}
+	/*右边 right*/
+	#right_content {border-style: solid;float:left;padding:5px; width: 75%;height: 95%;margin : 5px;}
+	/*区域固定*/
+	.area,.module {margin: 2px;padding: 2px;float:left;}
+	.area { width: 90% }
+	/*任务进度*/
+	#workLine {margin: 2px;padding: 2px;border-style: solid;height: 70%; }
+	/*区域*/
+	#right_left { width:30% }
+	#right_middle { width:25% }
+	#right_right {width: 40%}
+	#block1 { background-color: red ;height: 250px;}
+	#block2 { background-color: yellow ;height: 200px;}
+	#block3 { background-color: purple ;height: 150px;}
+	#block4 { background-color: green;height: 300px;}
+	#block5 { background-color: blue ;height: 200px;}
+	#block6 { background-color: pink;height: 250px;}
+	#progress_bar {float: left;background-color:	#B0C4DE;width:80% ;margin:2px;}
+	#progress_bar_child {background-color:#778899;width:40%}
+</style>
+<script type="text/javascript">
 	
-	<p>这是我的第五个网站,请多指教</p>
-	<form action="action_page.php">
-	First name:<br>
-	<input type="text" name="firstname" value="Mickey">
-	<br>
-	Last name:<br>
-	<input type="text" name="lastname" value="Mouse">
-	<br><br>
-	<input type="submit" value="Submit">
-	</form> 
-	<a href="https://wupeijiong.github.io/test1">https://wupeijiong.github.io/test1</a>
+</script>
+
+<!--主窗口-->
+<body>
+
+	<!--头标题，显示页面-->
+	<div id = 'header_item'>
+		<p>Welcome to my websit!</p>
+	</div>
+	
+	<div id = 'below'>
+		<!--左侧信息栏，包含个人基本信息，和任务进度条-->
+		<div id = 'left_navi'>
+			<!--图标-->
+			<div style ='border-style: solid';>
+			<p>图片</p>
+			<p>用户名</p>
+			<p>名言</p>
+			</div>
+			<div id = 'workLine'>
+				<div>任务进度 <button style='float: right;'>+</button></div>
+				<div id = 'task_block'>
+					<div>
+						<!--一个任务进度条-->
+						<div id='progress_bar'>
+							<div id ='progress_bar_child'><div style="width: 100px">Index Design</div></div>
+						</div>
+						<div id='percent' style='float: right;'>50%</div>
+						<!--一个任务进度条-->
+						<div id='progress_bar'>
+							<div id ='progress_bar_child'><div style="width: 100px">Index Design</div></div>
+						</div>
+						<div id='percent' style='float: right;'>50%</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--右侧专题链接，用于记载各种笔记，以块状形式表现-->
+		<div id = 'right_content'>
+			<div id = 'right_left' class = 'module'> 
+				<div id = 'block1' class="area">Android</div>
+				<div id = 'block2' class="area">Java</div>
+			</div>
+			<div id = 'right_middle' class = 'module'> 
+				<div id = 'block3' class="area">My Project</div>
+				<div id = 'block4' class="area">Html</div>
+			</div>
+			<div id = 'right_right' class = 'module'> 
+				<div id = 'block5' class="area">SQL</div>
+				<div id = 'block6' class="area">Other</div>
+			</div>
+		
+			
+		</div>
+
+	</div>
+
 
 
 </body>
-
-</html>>
+</html>
